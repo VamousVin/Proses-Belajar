@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RemakeJS</title>
+    <style>
+      .judul {
+        display: grid;
+        place-items: center;
+      }
+
+      .saklarLampu {
+        display: grid;
+        place-items: center;
+      }
+      .bg {
+        background-color: crimson;
+        height: 150px;
+        border-radius: 20px;
+        width: 300px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Samklar Lampu -->
+    <div class="judul">
+      <h2>Remake Belajar Javascript</h2>
+    </div>
+    <div class="saklarLampu">
+      <img id="lampu" src="/img/pic_bulboff.gif" alt="lampuOff" />
+      <button
+        onclick="document.getElementById('lampu').src='/img/pic_bulbon.gif'"
+      >
+        Nyalakan Lampu
+      </button>
+      <button
+        onclick="document.getElementById('lampu').src='/img/pic_bulboff.gif'"
+      >
+        Matikan Lampu
+      </button>
+    </div>
+
+    <!-- Merubah Konten -->
+    <h2 id="konten">
+      Kalimat ini akan berubah jika anda klik kotak dibawah ini!
+    </h2>
+    <button onclick="document.getElementById('konten').innerHTML='kan berubah'">
+      Klik disini
+    </button>
+    <button
+      onclick="document.getElementById('konten').innerHTML = 'Kalimat ini akan berubah jika anda klik kotak dibawah ini!'"
+    >
+      Klik disini untuk merubah kembali
+    </button>
+
+    <!-- Menghilangkan konten -->
+    <p id="lorem">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga debitis
+      beatae minima quia vitae animi iste magnam non eius iusto.
+    </p>
+    <button onclick="document.getElementById('lorem').style.display='none'">
+      klik untuk menghilangkan tulisan
+    </button>
+
+    <!-- Merubah style dari konten menggunakan input value -->
+    <div class="bg" id="bg">
+      <h1 class="judul">Ubah Background</h1>
+      <p>ubah background ini dengan mengisi form dibawah</p>
+    </div>
+    <input type="text" id="input" placeholder="contoh : red" />
+    <button id="konfirm" onclick="konfirm()">Konfirmasi</button>
+
+    <!-- Merbuah style dari konten tergantung opsi -->
+    <div class="bg" id="bg2">
+      <h1 id="judul2">Ubah dengan opsi</h1>
+      <p id="penjelasan2">
+        Klik pilihan opsi dan ubah yang kalian ingin ubah sesuai yang kalian
+        pilih
+      </p>
+    </div>
+    <select name="select" id="select">
+      <option disabled selected>Pilih Opsi</option>
+      <option>Background</option>
+      <option>Judul</option>
+      <option>Penjelasan</option>
+    </select>
+    <input type="text" id="input2" placeholder="contoh : red" />
+    <button id="konfirm2" onclick="konfirm2()">Konfirmasi</button>
+
+    <script src="main.js"></script>
+  </body>
+</html>
